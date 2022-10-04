@@ -7,4 +7,6 @@ Download the dataset from the link [here](https://drive.google.com/drive/folders
 pip install -r requirements.txt
 ```
 2. Run the ```main.py``` file with any query as shown below :  
-```python main.py --query "YOUR QUERY HERE"```
+```
+python main.py --query "YOUR QUERY HERE"
+```
