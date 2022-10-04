@@ -17,12 +17,9 @@ top_k = 20
 
 def get_corpus(passages):
     if "corpus.pt" not in os.listdir(os.getcwd()):
-        print("Creating corpus embeddings ... ")
         corpus_embeddings = bi_encoder.encode(passages, convert_to_tensor=True, show_progress_bar=True)
         torch.save(corpus_embeddings, "corpus.pt")
-        print("Embeddings created")
     else:
-        print("Embeddings already exist")
         corpus_embeddings = torch.load("corpus.pt")
     return corpus_embeddings
 
