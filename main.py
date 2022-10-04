@@ -2,6 +2,7 @@ from data_process import *
 from retrieval import *
 import argparse
 
+
 parser = argparse.ArgumentParser(description="Run the query for the bot")
 parser.add_argument('--query', help="Question to the bot", type=str, required=True)
 parser.add_argument('--data_path', help="Path for the stored dataset", type=str, required=True)
@@ -15,6 +16,7 @@ if "Responses.csv" not in os.listdir(os.getcwd()):
 
 df = pd.read_csv("Responses.csv")
 text = list(df["text"].values)
+
 
 search(query, text)
 
